@@ -33,7 +33,7 @@ header {
       display: none; /* Esconde a imagem em telas com largura de 768px ou menor */
     }
     .imagem img {
-        width: 100%; /* Ajusta a imagem para a largura do contêiner */
+        width: 100px; /* Ajusta a imagem para a largura do contêiner */
         height: auto; /* Mantém a proporção */
       }
 

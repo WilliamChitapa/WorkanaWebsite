@@ -28,6 +28,17 @@ header {
     z-index: 1000;
 }
 
+@media (max-width: 768px) {
+    .imagem img {
+      display: none; /* Esconde a imagem em telas com largura de 768px ou menor */
+    }
+    .imagem img {
+        width: 100%; /* Ajusta a imagem para a largura do contêiner */
+        height: auto; /* Mantém a proporção */
+      }
+
+  }
+
 /* Logo */
 .logo {
     font-size: 1.5rem;

@@ -71,14 +71,13 @@ header {
     color: #2D9CDB;
 }
 
-/* Botão */
 .btn {
     padding: 4px 4px;
     font-size: 1rem;
     color: #fff;
-    background-color: #2D9CDB;
+    background-color: #644fc1;
     border: none;
-    border-radius: 5px;
+    border-radius: 17px;
     cursor: pointer;
     transition: background-color 0.3s;
 }

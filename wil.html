@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fazenda Chitapa</title>
+  <link rel="stylesheet" href="wil.css">
+  <script src="wil.js"></script>
+</head>
+
+<body>
+  <div id="loader" class="loader">Fazenda Chitapa</div>
+
+  <div class="container" id="app">
+    <h1>Sistema de vendas, Fazenda Chitapa</h1>
+
+    <div class="product">
+      <img src="animais.jpg" alt="Animais">
+      <h2>Animais</h2>
+      <p>Preço: R$ 100,00</p>
+      <p>Estoque: <span id="animais-estoque">10</span></p>
+      <button onclick="vender('animais', 100)">Vender Animal</button>
+    </div>
+
+    <div class="product">
+      <img src="ovos.jpg" alt="Ovos">
+      <h2>Ovos</h2>
+      <p>Preço: R$ 1,00</p>
+      <p>Estoque: <span id="ovos-estoque">20</span></p>
+      <button onclick="vender('ovos', 1)">Vender Ovo</button>
+    </div>
+
+    <div class="product">
+      <img src="couves.jpg" alt="Couves">
+      <h2>Couves</h2>
+      <p>Preço: R$ 3,00</p>
+      <p>Estoque: <span id="couves-estoque">15</span></p>
+      <button onclick="vender('couves', 3)">Vender Couve</button>
+    </div>
+
+    <div class="product">
+      <img src="repolho.jpg" alt="Repolho">
+      <h2>Repolho</h2>
+      <p>Preço: R$ 4,00</p>
+      <p>Estoque: <span id="repolho-estoque">18</span></p>
+      <button onclick="vender('repolho', 4)">Vender Repolho</button>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <div class="sales-summary">
+      <h3>Total Vendido Hoje: R$ <span id="total-vendido">0</span></h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

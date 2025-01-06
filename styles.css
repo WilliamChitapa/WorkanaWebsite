@@ -1,0 +1,583 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    position: fixed; /* Torna o header fixo */
+    top: 0; /* Posiciona no topo */
+    left: 0; /* Posiciona à esquerda */
+    width: 100%; /* Garante que o header cubra toda a largura */
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5746af; /* Azul da Workana */
+}
+
+/* Nav links */
+#navLinks {
+    display: flex;
+}
+
+#navLinks ul {
+    display: flex;
+    list-style: none;
+}
+
+#navLinks ul li {
+    margin: 0 15px;
+}
+
+#navLinks ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+#navLinks ul li a:hover {
+    color: #2D9CDB;
+}
+
+/* Botão */
+.btn {
+    padding: 4px 4px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #2D9CDB;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1a73e8;
+}
+
+/* Menu hambúrguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: blue;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Esconde links no desktop */
+    #navLinks {
+        display: none; /* Esconde inicialmente */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; /* Ocupa toda a largura */
+        height: 100%; /* Ocupa toda a altura */
+        background: #333; /* Fundo branco */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        z-index: 10;
+    }
+
+    #navLinks ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navLinks ul li {
+        margin: 15px 0;
+    }
+
+    #navLinks ul li a {
+        color: white; /* Links pretos no menu responsivo */
+        font-size: 13px;
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+
+    /* Mostra o botão hambúrguer */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Transformação do hambúrguer em "X" */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    #navLinks.show {
+        display: flex;
+    }
+
+    .marcas h1{
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 30px;
+        color: #514c4c;
+        font-size: 1.10rem;
+    }
+
+    .minha-div2{
+        height: 290px;
+        width: 620px;
+        background-color: white;
+        border-radius: 35px;
+        align-items: center;
+        border:  1px solid rgb(237, 231, 231);
+        cursor: pointer;
+    }
+}
+
+
+
+main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.principal{
+    margin-top: 200px;
+    margin-left: 30px;
+    gap: 25px;
+}
+
+.principal h1{
+    font-size: 40px;
+}
+
+.principal h1 strong{
+    color: rgb(87, 87, 227);
+}
+
+@media (max-width: 768px) {
+    .imagem {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.span{
+    display: flex;
+    gap: 10px;
+    padding-left: 8px;
+    font-size: 15px;
+    align-items: center;
+}
+
+
+.texto{
+    display: flex;
+    flex-direction: column;
+}
+
+.texto h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #514c4c;
+}
+
+.paragrafo p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #3d3d3d;
+    font-size: 14px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.info button{
+    height: 50px;
+    width: 150px;
+    background-color:#644fc1;;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.info button:hover{
+    background-color:#5746af;
+    transition: 0.1s;
+}
+
+@media (max-width: 768px) {
+    .info{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .info button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%px;
+    }
+}
+
+.info a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(87,87,227 );
+}
+
+.imagem img{
+    margin-top: 100px;
+    max-width: 80%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .imagem img {
+         max-width:400px ;
+        align-items: center;
+    }
+}
+
+.container-div{
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.minha-div{
+    height: 290px;
+    width: 620px;
+    background-color: white;
+    border-radius: 35px;
+    align-items: center;
+    border:  1px solid rgb(237, 231, 231);
+    cursor: pointer;
+}
+
+.minha-div:hover{
+    border-color: #006adc;
+}
+
+.minha-div2{
+    height: 290px;
+    width: 620px;
+    background-color: white;
+    border-radius: 35px;
+    align-items: center;
+    border:  1px solid rgb(237, 231, 231);
+    cursor: pointer;
+}
+
+.minha-div2:hover{
+    border-color: #5746af;
+}
+
+.minha-div img{
+    margin-top: 40px;
+    width: 100px;
+    height: auto;
+}
+
+.minha-div2 img{
+    margin-top: 40px;
+    width: 100px;
+    height: auto;
+}
+
+.minha-div span{
+    color:#006adc;;
+    font-size: 20px;
+    line-height: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+.minha-div2 span{
+    color: #5746af;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.minha-div p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 15px;
+    color: #3d3d3d;
+    font-size: 14px;
+}
+
+
+.minha-div2 p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 15px;
+    color: #3d3d3d;
+    font-size: 14px;
+} 
+
+@media (max-width: 768px) {
+    .container-div {
+        margin-top: 100px;
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+    }
+
+    .minha-div,.minha-div2 {
+        margin-bottom: 20px; /* Add spacing between boxes in column layout */
+        width: 90%; /* Ensure boxes take full width in smaller screens */
+        height: 300px ;
+    }
+}
+
+
+
+.left{
+    margin-left: 40px;
+}
+
+.marcas p{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #3d3d3d;
+}
+
+.marcas h1{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+    color: #514c4c;
+}
+
+.marcas span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    color:#3d3d3d;
+}
+
+.industry {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.indus{
+    padding:30px;
+    width: 660px;
+    background-color: #edf6ff;;   
+    border-radius: 20px;
+}
+
+  .img1{
+    width: 620px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .img1 {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+}
+
+.indus p{
+    color: #006adc;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.indus span{
+    font-size: 15px;
+    color: #3d3d3d;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+@media (max-width: 768px) {
+    .industry,.img1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+    }
+
+    .indus {
+        margin-bottom: 20px; /* Add spacing between boxes in column layout */
+        width: 90%; /* Ensure boxes take full width in smaller screens */
+    }
+
+}
+
+.containerimg{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.containerimg img{
+    width: 310px;
+    height: 190px;
+    border-radius: 20px;
+}
+
+.textimg{
+    padding:30px;
+    width: 600px;
+    background-color:#f5f2ff;  
+    border-radius: 20px;
+}
+
+.textimg p{
+    font-size: 20px;
+    color: #5746af;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.textimg span{
+    color: #3d3d3d;
+    font-size: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (max-width: 768px) {
+    .containerimg {
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+    }
+
+    .textimg {
+        margin-bottom: 20px; /* Add spacing between boxes in column layout */
+        width: 100%; /* Ensure boxes take full width in smaller screens */
+    }
+}
+
+.project{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color: #3d3d3d;
+}
+
+.project span{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5746af;
+    font-size: 24px;
+}
+
+.aboutus{
+    margin-top: 100px;
+    background-color: #f1f1f1;
+    padding: 80px;
+}
+
+.containeraboutus{
+    display: flex;
+    justify-content: space-between;
+}
+
+.firstlinks{
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+ .firstlinks span {
+    color: #3d3d3d;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.firstlinks a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #5746af;
+}
+
+.firstlinks a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .containeraboutus {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+.fim{
+    background-color: #f1f1f1;
+    border-top:  1px solid rgb(221, 219, 219);
+    padding: 40px;
+}
+
+.fim span{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
